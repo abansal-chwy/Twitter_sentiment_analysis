@@ -17,7 +17,7 @@ access_token_secret="#"
 auth=tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
 
-<<<<<<< HEAD
+
 
 with open('output.csv', 'w',encoding="utf-8", newline='\n') as  f:
     writer = csv.DictWriter(f, fieldnames=['Tweet', 'Sentiment','Polarity'])
@@ -38,11 +38,3 @@ with open('output.csv', 'w',encoding="utf-8", newline='\n') as  f:
         writer.writerow({'Tweet':tweet.text, 'Sentiment':sentiment,'Polarity':polarity})
     #print(analysis.sentiment)
 
-=======
-api=tweepy.API(auth)
-public_tweets=api.search("Rahul Gandhi")
-for tweet in public_tweets:
-    print(tweet.text)
-    analysis=TextBlob(tweet.text)
-    print(analysis.sentiment)
->>>>>>> 17c9968244aae966090ed506b79edf2688805a11
